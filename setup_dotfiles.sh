@@ -3,7 +3,7 @@
 # Variables
 REPO_URL="https://github.com/user/dotfiles.git"  # Replace with your repository URL
 DOTFILES_DIR="$HOME/.dotfiles"
-PROGRAMS_FILE="$DOTFILES_DIR/installe_programas.txt"
+PROGRAMS_FILE="$DOTFILES_DIR/lista_programas_instalados.txt"
 
 # Step 1: Clone the dotfiles repository into .dotfiles directory
 if [ -d "$DOTFILES_DIR" ]; then
