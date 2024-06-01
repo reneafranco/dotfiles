@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Variables
-REPO_URL="https://github.com/user/dotfiles.git"  # Replace with your repository URL
+REPO_URL="https://github.com/reneafranco/dotfiles.git"  # Replace with your repository URL
 DOTFILES_DIR="$HOME/.dotfiles"
 PROGRAMS_FILE="$DOTFILES_DIR/lista_programas_instalados.txt"
+CONFIG_DIR="$HOME/.config"
 
-# Step 1: Clone the dotfiles repository into .dotfiles directory
+# Step 1: Clone or update the dotfiles repository
 if [ -d "$DOTFILES_DIR" ]; then
     echo "$DOTFILES_DIR already exists. Updating repository..."
     git -C "$DOTFILES_DIR" pull
@@ -34,6 +35,10 @@ else
     echo "$PROGRAMS_FILE does not exist."
     exit 1
 fi
+
+# Step 4: Backup .config directory
+echo "Backing up .config directory..."
+rsync -av --exclude '.git/' "$CONFIG_DIR" "$DOTFILES_DIR/"
 
 echo "Setup completed."
 
