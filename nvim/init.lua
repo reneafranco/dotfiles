@@ -8,7 +8,13 @@ require "user.plugins"
 require "user.cmp"
 require "user.telescope"
 require "user.treesitter"
+require "user.autopairs"
+--require "user.nvim-tree"
+require('nvim-tree').setup{}
+require "user.toggleterm"
 vim.cmd "colorscheme codemonkey"
+
+
 
 local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
@@ -19,8 +25,6 @@ local handlers = require("user.lsp.handlers")
 
 -- Configuración de null-ls
 require "user.lsp.null-ls"
-
--- Configuración de mason
 require "user.lsp.mason"
 
 -- Configuración de Language Servers

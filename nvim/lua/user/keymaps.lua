@@ -28,6 +28,10 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 --launch express
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
+-- función de toggle de Java
+--keymap('n', '<leader>j', '<cmd>lua _JAVA_TOGGLE()<CR>', opts)
+keymap("n", "<leader>j", ":lua _JAVA_TOGGLE()<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -64,6 +68,7 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
+
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
@@ -75,6 +80,6 @@ keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
---keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 --keymap("n", "<leader>f", ":Format<cr>", opts)
 
