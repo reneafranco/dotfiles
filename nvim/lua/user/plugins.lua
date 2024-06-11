@@ -51,8 +51,8 @@ return packer.startup(function(use)
 
   -- Autopairs 
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
--- Color Scheme
- use "lunarvim/colorschemes"
+  -- Color Scheme
+  use "lunarvim/colorschemes"
 
 -- Autocompleticion
   use "hrsh7th/nvim-cmp" -- The completion plugin
