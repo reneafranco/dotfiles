@@ -30,7 +30,7 @@ keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- función de toggle de Java
 --keymap('n', '<leader>j', '<cmd>lua _JAVA_TOGGLE()<CR>', opts)
-keymap("n", "<leader>j", ":lua _JAVA_TOGGLE()<CR>", opts)
+--keymap("n", "<leader>j", ":lua _JAVA_TOGGLE()<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
