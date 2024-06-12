@@ -47,10 +47,20 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
-smart_gaps on
 
+#Windows gaps 
+smart_gaps on
 gaps inner 8
-gaps outer -8
+gaps outer -2
+
+
+# Remove window title bar
+for_window [class="^.*"] border pixel 0
+
+
+#Windows title bar remove
+for_window [class="^.*"] border pixel 0
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
