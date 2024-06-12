@@ -14,5 +14,9 @@ PROMPT='%n@%m:%~%# '
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+alias setup_dotfiles="$HOME/.dotfiles/setup_dotfiles.sh"
+alias generate_installed_programs="$HOME/.dotfiles/generate_installed_programs.sh"
+
+
 #bindkey '^[[A' history-substring-search-up
 #bindkey '^[[B' history-substring-search-down
