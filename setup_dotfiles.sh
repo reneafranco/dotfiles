@@ -36,9 +36,6 @@ else
     exit 1
 fi
 
-# Step 4: Backup .config directory
-echo "Backing up .config directory..."
-rsync -av --exclude '.git/' "$CONFIG_DIR" "$DOTFILES_DIR/"
 
 echo "Setup completed."
 
