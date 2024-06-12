@@ -1,26 +1,15 @@
 #!/bin/bash
 
-# Variables
-REPO_URL="https://github.com/reneafranco/dotfiles.git"  # Replace with your repository URL
+# Define variables
 DOTFILES_DIR="$HOME/.dotfiles"
-PROGRAMS_FILE="$DOTFILES_DIR/lista_programas_instalados.txt"
-CONFIG_DIR="$HOME/.config"
+REPO_URL="URL_DEL_REPOSITORIO_AQUI"  # Reemplaza "URL_DEL_REPOSITORIO_AQUI" con la URL real del repositorio
 
-# Step 1: Clone or update the dotfiles repository
-if [ -d "$DOTFILES_DIR" ]; then
-    echo "$DOTFILES_DIR already exists. Updating repository..."
-    git -C "$DOTFILES_DIR" pull
-else
-    echo "Cloning repository into $DOTFILES_DIR..."
-    git clone "$REPO_URL" "$DOTFILES_DIR"
-fi
-
-# Step 2: Create symbolic links
-echo "Creating symbolic links..."
-ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
-ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+# Clone dotfiles repository
+echo "Cloning dotfiles repository..."
+git clone "$REPO_URL" "$DOTFILES_DIR" || { echo "Error: Could not clone dotfiles repository."; exit 1; }
 
 # Step 3: Install programs listed in installe_programas.txt
+PROGRAMS_FILE="$DOTFILES_DIR/installe_programas.txt"
 if [ -f "$PROGRAMS_FILE" ]; then
     echo "Installing programs..."
     while IFS= read -r program; do
@@ -36,6 +25,41 @@ else
     exit 1
 fi
 
-
 echo "Setup completed."
+
+# Create symbolic links for the specified files
+FILES_TO_LINK=(
+    alacritty
+    fonts
+    gtk-2.0
+    i3
+    i3blocks
+    neofetch
+    nitrogen
+    nvim
+    pulse
+    systemd
+    yay
+    zsh
+    generate_installed_programs.sh
+    lista_programas_instalados.txt
+    README.md
+    setup_dotfiles.sh
+)
+
+echo "Creating symbolic links..."
+for file in "${FILES_TO_LINK[@]}"; do
+    src="$DOTFILES_DIR/$file"
+    dest="$HOME/.config/$file"
+    if [ -e "$src" ]; then
+        if [ -e "$dest" ]; then
+            echo "$dest already exists, removing..."
+            rm -rf "$dest"
+        fi
+        echo "Creating symbolic link for $file..."
+        ln -s "$src" "$dest"
+    else
+        echo "File $file does not exist in $DOTFILES_DIR."
+    fi
+done
 
