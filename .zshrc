@@ -17,7 +17,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 alias setup_dotfiles="$HOME/.dotfiles/setup_dotfiles.sh"
 alias generate_installed_programs="$HOME/.dotfiles/generate_installed_programs.sh"
 
-[[ -s "$HOME/.config/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.config/sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
 #bindkey '^[[A' history-substring-search-up
