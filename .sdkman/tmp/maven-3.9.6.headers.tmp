@@ -1,0 +1,24 @@
+HTTP/1.1 302 Found
+Server: nginx/1.19.10
+Date: Fri, 14 Jun 2024 01:01:27 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Sdkman-ArchiveType: zip
+location: https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.6/apache-maven-3.9.6-bin.zip
+
+HTTP/2 200 
+etag: "3830cb789214ffb19d0c72a9f77812a6"
+content-type: application/zip
+last-modified: Tue, 28 Nov 2023 10:03:30 GMT
+x-checksum-md5: 3830cb789214ffb19d0c72a9f77812a6
+x-checksum-sha1: fc5c01a07e4a2ddf84af0dfadf382e6f7993462d
+via: 1.1 varnish, 1.1 varnish
+accept-ranges: bytes
+age: 823558
+date: Fri, 14 Jun 2024 01:01:28 GMT
+x-served-by: cache-iad-kcgs7200027-IAD, cache-chi-kigq8000089-CHI
+x-cache: HIT, HIT
+x-cache-hits: 106368, 0
+x-timer: S1718326888.194816,VS0,VE5
+content-length: 9513253
+
