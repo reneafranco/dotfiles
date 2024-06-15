@@ -157,4 +157,3 @@ for file in "${HOME_FILES[@]}"; do
         echo "File $file does not exist in $DOTFILES_DIR."
     fi
 done
-
