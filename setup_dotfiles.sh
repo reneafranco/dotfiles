@@ -2,7 +2,7 @@
 
 # Define variables
 DOTFILES_DIR="$HOME/.dotfiles"
-REPO_URL="URL_DEL_REPOSITORIO_AQUI"  # Reemplaza "URL_DEL_REPOSITORIO_AQUI" con la URL real del repositorio
+REPO_URL="https://github.com/reneafranco/dotfiles.git"  # Reemplaza "URL_DEL_REPOSITORIO_AQUI" con la URL real del repositorio
 
 # Clone dotfiles repository
 echo "Cloning dotfiles repository..."
