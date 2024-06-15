@@ -55,8 +55,8 @@ install_programs() {
 }
 
 # Install programs listed in install_pacman.txt and install_yay.txt
-PACMAN_PROGRAMS_FILE="$DOTFILES_DIR/lista_pacman.txt"
-YAY_PROGRAMS_FILE="$DOTFILES_DIR/lista_aur.txt"
+PACMAN_PROGRAMS_FILE="$HOME/downloads/dotfiles/lista_pacman.txt"
+YAY_PROGRAMS_FILE="$HOME/downloads/dotfiles/lista_aur.txt"
 
 # Install pacman programs
 install_programs "$PACMAN_PROGRAMS_FILE" "pacman"
