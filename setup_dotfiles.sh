@@ -171,5 +171,12 @@ git clone https://aur.archlinux.org/bumblebee-status.git "$HOME/.config/i3/bumbl
 cd "$HOME/.config/i3/bumblebee-status" || { echo "Error: Could not change to bumblebee-status directory."; exit 1; }
 makepkg -sicr
 
+# Install zsh-syntax-highlighting-git using yay
+echo "Installing zsh-syntax-highlighting-git..."
+yay -S --noconfirm zsh-syntax-highlighting-git
+
+echo "Installing autotiling..."
+yay -S --noconfirm autotiling
+
 echo "All tasks completed."
 
