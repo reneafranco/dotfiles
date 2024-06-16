@@ -157,3 +157,19 @@ for file in "${HOME_FILES[@]}"; do
         echo "File $file does not exist in $DOTFILES_DIR."
     fi
 done
+
+# Check and remove existing bumblebee-status in ~/.config/i3/
+BUMBLEBEE_STATUS_DIR="$HOME/.config/i3/bumblebee-status"
+if [ -d "$BUMBLEBEE_STATUS_DIR" ]; then
+    echo "$BUMBLEBEE_STATUS_DIR already exists, removing..."
+    rm -rf "$BUMBLEBEE_STATUS_DIR"
+fi
+
+# Clone bumblebee-status repository
+echo "Cloning bumblebee-status repository..."
+git clone https://aur.archlinux.org/bumblebee-status.git "$HOME/.config/i3/bumblebee-status"
+cd "$HOME/.config/i3/bumblebee-status" || { echo "Error: Could not change to bumblebee-status directory."; exit 1; }
+makepkg -sicr
+
+echo "All tasks completed."
+
