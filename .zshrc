@@ -22,3 +22,4 @@ alias generate_installed_programs="$HOME/.dotfiles/generate_installed_programs.s
 
 #bindkey '^[[A' history-substring-search-up
 #bindkey '^[[B' history-substring-search-down
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
