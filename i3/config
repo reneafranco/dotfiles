@@ -64,6 +64,8 @@ for_window [class="^.*"] border pixel 0
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+
+#comment here
 # kill focused window
 bindsym $mod+q kill
 
