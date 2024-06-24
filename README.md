@@ -9,6 +9,7 @@
 -- install i3 gaps 
 -- install autotiling --
 -- install bumblebee-status 
+-- install dmenu
 -- install nitrogen --
 
 -- install zsh 
