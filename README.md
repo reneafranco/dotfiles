@@ -11,7 +11,7 @@
 -- install i3 gaps 
 --install i3status --
 -- install autotiling --
--- install bumblebee-status 
+-- install bumblebee-status --
 -- install dmenu --
 -- install nitrogen --
 
@@ -20,8 +20,9 @@
 -- install powerlevel10k
 
 --install sdk man 
---install nerd-fonts
+--install nerd-fonts --
 --install neofetch --
+--intsll firefox --
 
 --install npm --
 
